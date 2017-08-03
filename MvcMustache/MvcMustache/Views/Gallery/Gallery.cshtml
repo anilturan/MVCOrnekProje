@@ -1,0 +1,59 @@
+﻿@using MvcMustache.Models
+@model GalleryModel
+@{
+    ViewBag.Title = "Gallery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="body">
+    <h1><span>@Model.GalleryBaslik</span></h1>
+    <ul class="gallery">
+        <li>
+            <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)">
+                <img src="@Model.ResimPathGallery[0]" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)">
+                <img src="@Model.ResimPathGallery[1]" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)">
+                <img src="@Model.ResimPathGallery[2]" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)">
+                <img src="@Model.ResimPathGallery[3]" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)">
+                <img src="@Model.ResimPathGallery[4]" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)">
+                <img src="@Model.ResimPathGallery[5]" alt="">
+            </a>
+        </li>
+        <li> 
+            <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)">
+                <img src="@Model.ResimPathGallery[6]" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)">
+                <img src="@Model.ResimPathGallery[7]" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)">
+                <img src="@Model.ResimPathGallery[8]" alt="">
+            </a>
+        </li>
+    </ul>
+</div>
+

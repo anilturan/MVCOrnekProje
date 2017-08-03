@@ -1,0 +1,37 @@
+﻿@using MvcMustache.Models
+@model HomeModel
+
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    
+    <div id="body">
+        <h1><span>@Model.BaslikAbout[0]</span></h1>
+        <div>
+            <img src="@Model.ResimPathAbout" alt="">
+            <div class="article">
+                <h3>@Model.BaslikAbout[1]</h3>
+                <p>
+                  @Model.IcerikAbout[0]  <a href="@Url.Action("http://www.freewebsitetemplates.com/about/terms/")">Terms of Use</a>
+                </p>
+                <h3>@Model.BaslikAbout[2]</h3>
+                <p>
+                   @Model.IcerikAbout[1] <a href="@Url.Action("http://www.freewebsitetemplates.com/freewebdesign/")">Free Web Design</a>
+                </p>
+                <h3>@Model.BaslikAbout[3]</h3>
+                <p>
+                 @Model.IcerikAbout[2]  
+                </p>
+                <h3>@Model.BaslikAbout[4]</h3>
+                <p>
+                  @Model.IcerikAbout[3] <a href="@Url.Action("http://www.freewebsitetemplates.com/")">Free Website Templates</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+
+

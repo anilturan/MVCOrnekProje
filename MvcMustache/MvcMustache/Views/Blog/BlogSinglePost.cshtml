@@ -1,0 +1,27 @@
+﻿@using MvcMustache.Models
+@model BlogModel
+
+@{
+    ViewBag.Title = "BlogSinglePost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="body">
+    <h1><span>@Model.BlogSinglePostBaslik</span></h1>
+    <div>
+        <img src="@Model.ResimPathBlogSinglePost" alt="">
+        <div class="article">
+            <h2>WHY I GREW A MUSTACHE</h2>
+            <p>
+                @Model.IcerikBlogSinglePost[0]
+            </p>
+            <p>
+                @Model.IcerikBlogSinglePost[1]
+            </p>
+            <p>
+                @Model.IcerikBlogSinglePost[2]
+            </p>
+        </div>
+    </div>
+</div>
+

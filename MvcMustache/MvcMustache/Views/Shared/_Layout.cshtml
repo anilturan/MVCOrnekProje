@@ -1,0 +1,87 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    @using System.Web.Optimization
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mustache Enthusiast</title>
+    @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/js")
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Content/mobile.css" media="screen and (max-width : 568px)">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // Seçili olana linke selected class ı ekleme fonksiyonu
+        $(function () {
+
+            var locationHref = window.location.pathname; // Açık olan sayfanın pathini alıyoruz
+            // id si navigation li nin içerisindeki a larda dönecek, eğer path hangi a nın attributundeki href e eşitse bir üst dizine çıkıp oradaki li ye class="selected" ekleyecek
+            $.each($('#navigation li a'), function (i, obj) {
+                if (locationHref == $(obj).attr('href')) {
+                    $(obj).parent("li").addClass("selected");
+
+                }
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="header">
+        <a href="@Url.Action("Home","Home")" class="logo">
+            <img src="/images/logo.jpg" alt="">
+        </a>
+        <ul id="navigation">
+            <li>
+                @Html.ActionLink("home", "Home", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("about", "About", "Home")
+            </li>
+            <li>
+
+                @Html.ActionLink("gallery", "Gallery", "Gallery")
+            </li>
+            <li>
+                @Html.ActionLink("blog", "Blog", "Blog")
+            </li>
+            <li>
+                @Html.ActionLink("contact", "Contact", "Home")
+            </li>
+            <li>
+                @Html.ActionLink("LogHome", "LogHome", "Home")
+            </li>
+
+        </ul>
+    </div>
+
+    @RenderBody()
+    <div id="footer">
+        <div>
+            <p>&copy; 2023 by Mustacchio. All rights reserved.</p>
+            <ul>
+                <li>
+                    <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a>
+                </li>
+                <li>
+                    <a href="http://freewebsitetemplates.com/go/facebook/" id="facebook">facebook</a>
+                </li>
+                <li>
+                    <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">googleplus</a>
+                </li>
+                <li>
+                    <a href="http://pinterest.com/fwtemplates/" id="pinterest">pinterest</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

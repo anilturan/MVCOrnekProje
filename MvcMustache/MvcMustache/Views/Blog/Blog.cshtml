@@ -1,0 +1,51 @@
+﻿@using MvcMustache.Models
+@model BlogModel
+@{
+    ViewBag.Title = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="body">
+    <h1><span>@Model.BlogBaslik[0]</span></h1>
+    <div>
+        <ul>
+            <li>
+                <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)" class="figure">
+                    <img src="@Model.ResimPathBlog[0]" alt="">
+                </a>
+                <div>
+                    <h3>@Model.BlogBaslik[1]</h3>
+                    <p>
+                        @Model.IcerikBlog[0]
+                    </p>
+                    <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)" class="more">read this</a>
+                </div>
+            </li>
+            <li>
+                <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)" class="figure">
+                    <img src="@Model.ResimPathBlog[1]" alt="">
+                </a>
+                <div>
+                    <h3> @Model.BlogBaslik[2]</h3>
+                    <p>
+                        @Model.IcerikBlog[1]
+                    </p>
+                    <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)" class="more">read this</a>
+                </div>
+            </li>
+            <li>
+                <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)" class="figure">
+                    <img src="@Model.ResimPathBlog[2]" alt="">
+                </a>
+                <div>
+                    <h3>@Model.BlogBaslik[3]</h3>
+                    <p>
+                        @Model.IcerikBlog[2]
+                    </p>
+                    <a href="@Url.Action(Model.LinkKontrolAdi,Model.LinkActionAdi)" class="more">read this</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+

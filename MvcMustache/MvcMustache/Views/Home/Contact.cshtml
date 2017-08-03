@@ -1,0 +1,23 @@
+﻿@using MvcMustache.Models
+@model Contact
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ 
+<div id="body">
+    <h1><span>let's keep in touch</span></h1>
+
+  
+    <form action="/Home/Contact" method="post">
+         <input type="text" name="name" placeholder="Name" required /><br />
+         <input type="text" name="address" placeholder="Address" required /><br />
+         <input type="text" name="email" placeholder="Email" data-error="Bruh, that email address is invalid" required /><br />
+         <input type="text" name="phone" placeholder="Phone" required /><br />
+         <textarea name="message" placeholder="Message" required></textarea><br />
+         <input type="submit" name="send" id="send" value="send">
+    </form>
+       
+   
+</div>
+

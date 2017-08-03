@@ -1,0 +1,39 @@
+﻿@using MvcMustache.Models
+@model HomeModel
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="body">
+    <div id="featured">
+        <img src="@Model.ResimPathHome[0]" alt="">
+        <div>
+            <h2>@Model.BaslikHome</h2>
+            <span>@Model.IcerikHome[0]</span>
+            <span>@Model.IcerikHome[1]</span>
+            <span>@Model.IcerikHome[2]</span>
+            <a href="@Url.Action("BlogSinglePost","Blog")" class="more">read more</a>
+        </div>
+    </div>
+    <ul>
+        <li>
+            <a href="@Url.Action("gallery", "Gallery")">
+                <img src="@Model.ResimPathHome[1]" alt="">
+                <span>@Model.ResimAdi[0]</span>
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action("gallery", "Gallery")">
+                <img src="@Model.ResimPathHome[2]" alt="">
+                <span>@Model.ResimAdi[1]</span>
+            </a>
+        </li>
+        <li>
+            <a href="@Url.Action("gallery", "Gallery")">
+                <img src="@Model.ResimPathHome[3]" alt="">
+                <span>@Model.ResimAdi[2]</span>
+            </a>
+        </li>
+    </ul>
+</div>
